@@ -1,0 +1,416 @@
+INFO - 2024-05-03 00:01:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-03 00:01:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-03 00:01:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-03 00:02:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-03 00:02:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-03 00:02:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-03 00:08:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-03 00:08:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-03 00:08:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-03 00:08:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-03 00:08:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-03 00:09:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-03 00:09:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-03 00:10:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-03 00:10:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-03 00:10:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-03 00:10:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-03 00:11:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-03 00:12:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-03 00:12:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-03 00:12:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-03 00:12:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-03 00:15:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-03 00:15:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-03 00:23:19 --> mysqli_sql_exception: Table 'publication_mvc.post' doesn't exist in C:\xampp\htdocs\proyecto\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\proyecto\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT `post`.*...', 0)
+#1 C:\xampp\htdocs\proyecto\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `post`.*...')
+#2 C:\xampp\htdocs\proyecto\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `post`.*...')
+#3 C:\xampp\htdocs\proyecto\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `post`.*...', Array, false)
+#4 C:\xampp\htdocs\proyecto\app\Models\PublicationModel.php(29): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\proyecto\app\Controllers\Publication.php(15): App\Models\PublicationModel->show()
+#6 C:\xampp\htdocs\proyecto\system\CodeIgniter.php(933): App\Controllers\Publication->index()
+#7 C:\xampp\htdocs\proyecto\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publication))
+#8 C:\xampp\htdocs\proyecto\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\proyecto\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\proyecto\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\proyecto\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2024-05-03 00:23:19 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'publication_mvc.post' doesn't exist
+[Method: GET, Route: publication]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `post`.*, `user`.`name`
+FROM `post`
+JOIN `user` ON `user`.`id` = `id_user`
+ORDER BY `id` DESC', [], false)
+ 2 APPPATH\Models\PublicationModel.php(29): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Publication.php(15): App\Models\PublicationModel->show()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Publication->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publication))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-03 00:23:19 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'publication_mvc.post' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `post`.*, `user`.`name`
+FROM `post`
+JOIN `user` ON `user`.`id` = `id_user`
+ORDER BY `id` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `post`.*, `user`.`name`
+FROM `post`
+JOIN `user` ON `user`.`id` = `id_user`
+ORDER BY `id` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `post`.*, `user`.`name`
+FROM `post`
+JOIN `user` ON `user`.`id` = `id_user`
+ORDER BY `id` DESC', [], false)
+ 4 APPPATH\Models\PublicationModel.php(29): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Publication.php(15): App\Models\PublicationModel->show()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Publication->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publication))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-03 00:23:19 --> [Caused by] mysqli_sql_exception: Table 'publication_mvc.post' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT `post`.*, `user`.`name`
+FROM `post`
+JOIN `user` ON `user`.`id` = `id_user`
+ORDER BY `id` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `post`.*, `user`.`name`
+FROM `post`
+JOIN `user` ON `user`.`id` = `id_user`
+ORDER BY `id` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `post`.*, `user`.`name`
+FROM `post`
+JOIN `user` ON `user`.`id` = `id_user`
+ORDER BY `id` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `post`.*, `user`.`name`
+FROM `post`
+JOIN `user` ON `user`.`id` = `id_user`
+ORDER BY `id` DESC', [], false)
+ 5 APPPATH\Models\PublicationModel.php(29): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Publication.php(15): App\Models\PublicationModel->show()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Publication->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publication))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-05-03 00:23:19 --> mysqli_sql_exception: Table 'publication_mvc.post' doesn't exist in C:\xampp\htdocs\proyecto\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\proyecto\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT `post`.*...', 0)
+#1 C:\xampp\htdocs\proyecto\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `post`.*...')
+#2 C:\xampp\htdocs\proyecto\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `post`.*...')
+#3 C:\xampp\htdocs\proyecto\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `post`.*...', Array, false)
+#4 C:\xampp\htdocs\proyecto\app\Models\PublicationModel.php(29): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\proyecto\app\Controllers\Publication.php(15): App\Models\PublicationModel->show()
+#6 C:\xampp\htdocs\proyecto\system\CodeIgniter.php(933): App\Controllers\Publication->index()
+#7 C:\xampp\htdocs\proyecto\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publication))
+#8 C:\xampp\htdocs\proyecto\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\proyecto\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\proyecto\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\proyecto\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2024-05-03 00:23:20 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'publication_mvc.post' doesn't exist
+[Method: GET, Route: publication]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `post`.*, `user`.`name`
+FROM `post`
+JOIN `user` ON `user`.`id` = `id_user`
+ORDER BY `id` DESC', [], false)
+ 2 APPPATH\Models\PublicationModel.php(29): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Publication.php(15): App\Models\PublicationModel->show()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Publication->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publication))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-03 00:23:20 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'publication_mvc.post' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `post`.*, `user`.`name`
+FROM `post`
+JOIN `user` ON `user`.`id` = `id_user`
+ORDER BY `id` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `post`.*, `user`.`name`
+FROM `post`
+JOIN `user` ON `user`.`id` = `id_user`
+ORDER BY `id` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `post`.*, `user`.`name`
+FROM `post`
+JOIN `user` ON `user`.`id` = `id_user`
+ORDER BY `id` DESC', [], false)
+ 4 APPPATH\Models\PublicationModel.php(29): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Publication.php(15): App\Models\PublicationModel->show()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Publication->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publication))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-03 00:23:20 --> [Caused by] mysqli_sql_exception: Table 'publication_mvc.post' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT `post`.*, `user`.`name`
+FROM `post`
+JOIN `user` ON `user`.`id` = `id_user`
+ORDER BY `id` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `post`.*, `user`.`name`
+FROM `post`
+JOIN `user` ON `user`.`id` = `id_user`
+ORDER BY `id` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `post`.*, `user`.`name`
+FROM `post`
+JOIN `user` ON `user`.`id` = `id_user`
+ORDER BY `id` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `post`.*, `user`.`name`
+FROM `post`
+JOIN `user` ON `user`.`id` = `id_user`
+ORDER BY `id` DESC', [], false)
+ 5 APPPATH\Models\PublicationModel.php(29): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Publication.php(15): App\Models\PublicationModel->show()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Publication->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publication))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-05-03 00:26:48 --> mysqli_sql_exception: Table 'publication_mvc.post' doesn't exist in C:\xampp\htdocs\proyecto\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\proyecto\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT `post`.*...', 0)
+#1 C:\xampp\htdocs\proyecto\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `post`.*...')
+#2 C:\xampp\htdocs\proyecto\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `post`.*...')
+#3 C:\xampp\htdocs\proyecto\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `post`.*...', Array, false)
+#4 C:\xampp\htdocs\proyecto\app\Models\PublicationModel.php(29): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\proyecto\app\Controllers\Publication.php(15): App\Models\PublicationModel->show()
+#6 C:\xampp\htdocs\proyecto\system\CodeIgniter.php(933): App\Controllers\Publication->index()
+#7 C:\xampp\htdocs\proyecto\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publication))
+#8 C:\xampp\htdocs\proyecto\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\proyecto\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\proyecto\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\proyecto\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2024-05-03 00:26:48 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'publication_mvc.post' doesn't exist
+[Method: GET, Route: publication]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `post`.*, `user`.`name`
+FROM `post`
+JOIN `user` ON `user`.`id` = `id_user`
+ORDER BY `id` DESC', [], false)
+ 2 APPPATH\Models\PublicationModel.php(29): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Publication.php(15): App\Models\PublicationModel->show()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Publication->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publication))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-03 00:26:48 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'publication_mvc.post' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `post`.*, `user`.`name`
+FROM `post`
+JOIN `user` ON `user`.`id` = `id_user`
+ORDER BY `id` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `post`.*, `user`.`name`
+FROM `post`
+JOIN `user` ON `user`.`id` = `id_user`
+ORDER BY `id` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `post`.*, `user`.`name`
+FROM `post`
+JOIN `user` ON `user`.`id` = `id_user`
+ORDER BY `id` DESC', [], false)
+ 4 APPPATH\Models\PublicationModel.php(29): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Publication.php(15): App\Models\PublicationModel->show()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Publication->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publication))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-03 00:26:48 --> [Caused by] mysqli_sql_exception: Table 'publication_mvc.post' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT `post`.*, `user`.`name`
+FROM `post`
+JOIN `user` ON `user`.`id` = `id_user`
+ORDER BY `id` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `post`.*, `user`.`name`
+FROM `post`
+JOIN `user` ON `user`.`id` = `id_user`
+ORDER BY `id` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `post`.*, `user`.`name`
+FROM `post`
+JOIN `user` ON `user`.`id` = `id_user`
+ORDER BY `id` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `post`.*, `user`.`name`
+FROM `post`
+JOIN `user` ON `user`.`id` = `id_user`
+ORDER BY `id` DESC', [], false)
+ 5 APPPATH\Models\PublicationModel.php(29): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Publication.php(15): App\Models\PublicationModel->show()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Publication->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publication))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-05-03 00:26:51 --> mysqli_sql_exception: Table 'publication_mvc.post' doesn't exist in C:\xampp\htdocs\proyecto\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\proyecto\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT `post`.*...', 0)
+#1 C:\xampp\htdocs\proyecto\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `post`.*...')
+#2 C:\xampp\htdocs\proyecto\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `post`.*...')
+#3 C:\xampp\htdocs\proyecto\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `post`.*...', Array, false)
+#4 C:\xampp\htdocs\proyecto\app\Models\PublicationModel.php(29): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\proyecto\app\Controllers\Publication.php(15): App\Models\PublicationModel->show()
+#6 C:\xampp\htdocs\proyecto\system\CodeIgniter.php(933): App\Controllers\Publication->index()
+#7 C:\xampp\htdocs\proyecto\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publication))
+#8 C:\xampp\htdocs\proyecto\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\proyecto\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\proyecto\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\proyecto\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2024-05-03 00:26:51 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'publication_mvc.post' doesn't exist
+[Method: GET, Route: publication]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `post`.*, `user`.`name`
+FROM `post`
+JOIN `user` ON `user`.`id` = `id_user`
+ORDER BY `id` DESC', [], false)
+ 2 APPPATH\Models\PublicationModel.php(29): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Publication.php(15): App\Models\PublicationModel->show()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Publication->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publication))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-03 00:26:51 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'publication_mvc.post' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `post`.*, `user`.`name`
+FROM `post`
+JOIN `user` ON `user`.`id` = `id_user`
+ORDER BY `id` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `post`.*, `user`.`name`
+FROM `post`
+JOIN `user` ON `user`.`id` = `id_user`
+ORDER BY `id` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `post`.*, `user`.`name`
+FROM `post`
+JOIN `user` ON `user`.`id` = `id_user`
+ORDER BY `id` DESC', [], false)
+ 4 APPPATH\Models\PublicationModel.php(29): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Publication.php(15): App\Models\PublicationModel->show()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Publication->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publication))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-03 00:26:51 --> [Caused by] mysqli_sql_exception: Table 'publication_mvc.post' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT `post`.*, `user`.`name`
+FROM `post`
+JOIN `user` ON `user`.`id` = `id_user`
+ORDER BY `id` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `post`.*, `user`.`name`
+FROM `post`
+JOIN `user` ON `user`.`id` = `id_user`
+ORDER BY `id` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `post`.*, `user`.`name`
+FROM `post`
+JOIN `user` ON `user`.`id` = `id_user`
+ORDER BY `id` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `post`.*, `user`.`name`
+FROM `post`
+JOIN `user` ON `user`.`id` = `id_user`
+ORDER BY `id` DESC', [], false)
+ 5 APPPATH\Models\PublicationModel.php(29): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Publication.php(15): App\Models\PublicationModel->show()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Publication->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publication))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-05-03 00:41:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-03 00:43:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-03 00:43:22 --> mysqli_sql_exception: Table 'publication_mvc.post' doesn't exist in C:\xampp\htdocs\proyecto\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\proyecto\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT `post`.*...', 0)
+#1 C:\xampp\htdocs\proyecto\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `post`.*...')
+#2 C:\xampp\htdocs\proyecto\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `post`.*...')
+#3 C:\xampp\htdocs\proyecto\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `post`.*...', Array, false)
+#4 C:\xampp\htdocs\proyecto\app\Models\PublicationModel.php(29): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\proyecto\app\Controllers\Publication.php(15): App\Models\PublicationModel->show()
+#6 C:\xampp\htdocs\proyecto\system\CodeIgniter.php(933): App\Controllers\Publication->index()
+#7 C:\xampp\htdocs\proyecto\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publication))
+#8 C:\xampp\htdocs\proyecto\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\proyecto\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\proyecto\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\proyecto\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2024-05-03 00:43:22 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'publication_mvc.post' doesn't exist
+[Method: GET, Route: publication]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `post`.*, `user`.`name`
+FROM `post`
+JOIN `user` ON `user`.`id` = `id_user`
+ORDER BY `id` DESC', [], false)
+ 2 APPPATH\Models\PublicationModel.php(29): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Publication.php(15): App\Models\PublicationModel->show()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Publication->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publication))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-03 00:43:22 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'publication_mvc.post' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `post`.*, `user`.`name`
+FROM `post`
+JOIN `user` ON `user`.`id` = `id_user`
+ORDER BY `id` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `post`.*, `user`.`name`
+FROM `post`
+JOIN `user` ON `user`.`id` = `id_user`
+ORDER BY `id` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `post`.*, `user`.`name`
+FROM `post`
+JOIN `user` ON `user`.`id` = `id_user`
+ORDER BY `id` DESC', [], false)
+ 4 APPPATH\Models\PublicationModel.php(29): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Publication.php(15): App\Models\PublicationModel->show()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Publication->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publication))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-05-03 00:43:22 --> [Caused by] mysqli_sql_exception: Table 'publication_mvc.post' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT `post`.*, `user`.`name`
+FROM `post`
+JOIN `user` ON `user`.`id` = `id_user`
+ORDER BY `id` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `post`.*, `user`.`name`
+FROM `post`
+JOIN `user` ON `user`.`id` = `id_user`
+ORDER BY `id` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `post`.*, `user`.`name`
+FROM `post`
+JOIN `user` ON `user`.`id` = `id_user`
+ORDER BY `id` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `post`.*, `user`.`name`
+FROM `post`
+JOIN `user` ON `user`.`id` = `id_user`
+ORDER BY `id` DESC', [], false)
+ 5 APPPATH\Models\PublicationModel.php(29): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Publication.php(15): App\Models\PublicationModel->show()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Publication->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Publication))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
